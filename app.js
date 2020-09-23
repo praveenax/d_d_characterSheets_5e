@@ -6,7 +6,8 @@ var app = express();
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.send('D&D Generated Character Sheets 5th Edition!')
+  // res.send('D&D Generated Character Sheets 5th Edition!')
+  res.redirect('/index.html');
 });
 
 app.get('/character/:name', function (req, res) {
@@ -16,7 +17,7 @@ app.get('/character/:name', function (req, res) {
 });
 
 app.listen(3000, function () {
-  console.log('Ready');
+  console.log('Ready at 3000');
 });
 
 // load classes
